@@ -92,5 +92,3 @@ int main(int argc, char *argv[]) {
 
     return 0;
 }
-
-// mkdir directories that doesn't exist

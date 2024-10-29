@@ -24,7 +24,7 @@ For more information, refer to this link: https://www.ietf.org/rfc/rfc1951.txt
 To use the utilities for compressing and decompressing files:
 
 ### myzip and myunzip
-These commands compress and decompress files using `deflate8` and `inflate8`.
+These commands compress and decompress files using `deflate8` and `inflate8`. 
 
 ```bash
 # Compress a file
@@ -33,6 +33,8 @@ bin/myzip input_filename output_zipname
 # Decompress a file
 bin/myunzip input_zipped_file
 ```
+
+#### Note: myzip only works on files, not directories. Myunzip will work the best with files zipped using myzip. 
 
 ### Inflate
 Used to decompress files that were compressed with Huffman codes.
