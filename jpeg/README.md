@@ -103,6 +103,6 @@ This command will output inputcopy.ppm.
 
 ### References
 
-References
 JPEG Standard: https://www.w3.org/Graphics/JPEG/itu-t81.pdf
+
 Sample Images: https://www.cs.cornell.edu/courses/cs664/2003fa/images/

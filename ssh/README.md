@@ -78,7 +78,7 @@ To clean up the generated files:
 make clean
 ```
 
-#### Using the Keygen Executable
+### Using the Keygen Executable
 To generate an RSA key pair, use the keygen executable as follows:
 
 ```bash
