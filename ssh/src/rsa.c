@@ -42,12 +42,10 @@ void rsa_free(rsa_context *ctx) {
 }
 
 int calculate_power_two(bigint *p, size_t bits) {
-    // printf("bits %zu\n", bits);
     size_t num_limbs = bits / 64;
     size_t shift = bits % 64;
 
     p->num_limbs = num_limbs + 1;
-    // printf("num_limbs %zu\n", num_limbs);
     p->data = realloc(p->data, sizeof(big_uint) * (num_limbs + 1));
     p->signum = 1;
 

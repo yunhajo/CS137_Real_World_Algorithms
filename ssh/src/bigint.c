@@ -1,5 +1,4 @@
 #include "bigint.h"
-
 #include <stddef.h>
 #include <stdint.h>
 #include <stdlib.h>
@@ -49,19 +48,6 @@ int big_copy(bigint *X, const bigint *Y) {
     return 0;
 }
 
-int toBinaryString(big_uint n, char *string) {
-  int num_bits = sizeof(big_uint) * 8;
-  if (!string) {
-    return NULL;
-  }
-  for (int i = num_bits - 1; i >= 0; i--) {
-    string[i] = (n & 1) + '0';
-    n >>= 1;
-  }
-  string[num_bits] = '\0';
-  return 0;
-}
-
 size_t big_bitlen(const bigint *X) {
     
     char output[X->num_limbs * 64 + 1];
@@ -76,6 +62,7 @@ int print_bigint(const bigint *p) {
     char output[500];
     size_t size;
     big_write_string(p, output, 500, &size);
+    return 0;
 }
 
 int print_bigint_all(const bigint *p) {
@@ -88,6 +75,7 @@ int print_bigint_all(const bigint *p) {
     printf("%s\n", output);
     printf("Size of buffer is %zu\n", size);
     printf("Sign is %d\n", p->signum);
+    return 0;
 }
 
 size_t big_size(const bigint *X) {
